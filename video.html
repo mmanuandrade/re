@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vídeo Jardim</title>
+</head>
+<body>
+
+  <h1>Assista ao vídeo do jardim</h1>
+
+  <video id="video" width="600" controls poster="https://via.placeholder.com/600x400/ff7f7f/333333?text=P%C3%B4ster+1">
+    <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+    Seu navegador não suporta a tag de vídeo.
+
+    <!-- Legenda -->
+    <track src="https://www.example.com/legendas.vtt" kind="subtitles" srclang="pt" label="Português">
+  </video>
+
+  <br><br>
+
+  <button onclick="alternarPoster()">Alterar Pôster</button>
+  <button onclick="informarAtributos()">Informar Atributos</button>
+  <button onclick="mudarTamanho()">Alterar Tamanho</button>
+
+  <script>
+    var video = document.getElementById('video');
+    var poster1 = "https://via.placeholder.com/600x400/ff7f7f/333333?text=P%C3%B4ster+1"; // Pôster 1
+    var poster2 = "https://via.placeholder.com/600x400/7f7fff/333333?text=P%C3%B4ster+2"; // Pôster 2
+    var isPoster1 = true; // Flag para saber qual pôster está atualmente
+
+    // Função para alternar entre os pôsteres
+    function alternarPoster() {
+      if (isPoster1) {
+        video.poster = poster2;
+      } else {
+        video.poster = poster1;
+      }
+      isPoster1 = !isPoster1;
+    }
+
+    // Alterando os parâmetros width e height do vídeo
+    function mudarTamanho() {
+      video.width = 960; // Alterando a largura
+      video.height = 540; // Alterando a altura
+    }
+
+    // Informar atributos do vídeo
+    function informarAtributos() {
+      alert("Atributos do vídeo:\n" +
+            "Fonte: " + video.currentSrc + "\n" +
+            "Controles: " + video.controls + "\n" +
+            "Autoplay: " + video.autoplay + "\n" +
+            "Loop: " + video.loop + "\n" +
+            "Pôster: " + video.poster + "\n" +
+            "ID: " + video.id + "\n" +
+            "Largura: " + video.width + "\n" +
+            "Altura: " + video.height);
+    }
+
+    // Detecta quando o vídeo é pausado
+    video.addEventListener('pause', function() {
+      alert('O vídeo foi pausado!');
+    });
+
+    // Detecta quando o vídeo é finalizado
+    video.addEventListener('ended', function() {
+      alert('O vídeo foi finalizado!');
+    });
+
+    // Exemplo das propriedades videoWidth e videoHeight
+    console.log("Largura do vídeo: " + video.videoWidth);
+    console.log("Altura do vídeo: " + video.videoHeight);
+
+    // Verificar se o vídeo pode ser reproduzido
+    var canPlay = video.canPlayType("video/mp4");
+    console.log("O vídeo pode ser reproduzido? " + (canPlay ? "Sim" : "Não"));
+
+  </script>
+
+</body>
+</html>

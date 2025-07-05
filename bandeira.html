@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<style>
+    canvas{
+        border: 1px solid #000;
+        background: rgb(255, 255, 255)
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplo rm</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+
+      <script>
+        $(document).ready(function (){
+           var canvas1 = $("#canvas")[0];
+           var ctx = canvas1.getContext("2d");
+
+           //vermelho
+
+           ctx.strokeRect(0,0,800,800);
+           ctx.fillStyle = '#f00';
+           ctx.fillRect(0,0,800,800 );
+           ctx.strokeStyle = "#f00";
+           ctx.lineWidth = 1;
+           
+
+           // branca
+           ctx.strokeRect(300,45,150,500);
+           ctx.fillStyle = '#FFF';
+           ctx.fillRect(300,45,150, 500 );
+           ctx.strokeStyle = "#FFF";
+           ctx.lineWidth = 1;
+           
+
+             // branca 2
+             ctx.strokeRect(130,230,500,140);
+           ctx.fillStyle = '#FFF';
+           ctx.fillRect(130,230,500, 140 );
+           ctx.strokeStyle = "#FFF";
+           ctx.lineWidth = 1;
+           
+
+
+        });
+      </script>
+
+</head>
+<body>
+    <canvas id="canvas" width="800" height="600">
+
+    </canvas>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<style>
+    canvas{
+        border: 1px solid #000;
+        background: rgb(255, 255, 255)
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplo rm</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+
+      <script>
+        $(document).ready(function (){
+           var canvas1 = $("#canvas")[0];
+           var ctx = canvas1.getContext("2d");
+
+           //vermelho
+
+           ctx.strokeRect(0,0,800,200);
+           ctx.fillStyle = '#f00';
+           ctx.fillRect(0,0,800,200 );
+           ctx.strokeStyle = "#f00";
+           ctx.lineWidth = 1;
+
+
+           //azul
+           ctx.strokeRect(0,400,800,200);
+           ctx.fillStyle = '#00f';
+           ctx.fillRect(0,400,800,200 );
+           ctx.strokeStyle = "#00f";
+           ctx.lineWidth = 1;
+        });
+      </script>
+
+</head>
+<body>
+    <canvas id="canvas" width="800" height="600">
+
+    </canvas>
+</body>
+</html>

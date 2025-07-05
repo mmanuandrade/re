@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>reprodutor de audio</title>
+</head>
+<body>
+  <h1>reprodutor de audio</h1>
+
+  <audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" controls></audio>
+
+  <div>
+    <button onclick="tocarOuPausar()">Tocar / Pausar</button>
+    <button onclick="silenciar()">Silenciar / Ativar Som</button>
+    <button onclick="mostrarTempo()">Tempo Atual</button>
+  </div>
+
+  <script>
+    const audio = document.getElementById("audio");
+
+    function tocarOuPausar() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+
+    function silenciar() {
+      audio.muted = !audio.muted;
+    }
+
+    function mostrarTempo() {
+      alert("Tempo atual: " + audio.currentTime.toFixed(2) + " segundos");
+    }
+  </script>
+</body>
+</html>
